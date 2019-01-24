@@ -2,7 +2,7 @@
   <div class="container">
 
     <div class="navbar-header">
-      <%= link_to "CourseSelect", root_path, class: 'navbar-brand' %>
+      <%= link_to "点餐系统", root_path, class: 'navbar-brand' %>
     </div>
 
     <div class="collapse navbar-collapse">
@@ -11,9 +11,9 @@
         <li class=<%= "active" if params[:controller]=="homes" %>> <%= link_to "主页", root_path %></li>
 
         <% if student_logged_in? %>
-            <li class=<%= "active" if params[:controller]=="courses" %>> <%= link_to "我的课程", courses_path %></li>
+            <li class=<%= "active" if params[:controller]=="courses" %>> <%= link_to "菜品浏览", courses_path %></li>
         <% elsif teacher_logged_in? %>
-            <li class=<%= "active" if params[:controller]=="courses" %>> <%= link_to "课程管理", courses_path %></li>
+            <li class=<%= "active" if params[:controller]=="courses" %>> <%= link_to "菜品管理", courses_path %></li>
         <% elsif admin_logged_in? %>
             <li> <%= link_to "控制面板", rails_admin_path %></li>
         <% end %>

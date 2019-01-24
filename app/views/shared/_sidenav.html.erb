@@ -6,12 +6,12 @@
 
         <% if teacher_logged_in? %>
             <a data-toggle="collapse" data-parent="#accordion" href="#CourseCollapse"><span class="glyphicon glyphicon-user"></span>
-              课程管理</a>
+              菜品管理</a>
         <% end %>
 
         <% if student_logged_in? %>
             <a data-toggle="collapse" data-parent="#accordion" href="#CourseCollapse"><span class="glyphicon glyphicon-user"></span>
-              选修课程</a>
+              菜单列表</a>
         <% end %>
 
       </h4>
@@ -23,13 +23,13 @@
         <% if teacher_logged_in? %>
             <li class="list-group-item">
               <%= link_to courses_path do %>
-                  <span class="glyphicon glyphicon-chevron-right"></span> 已授课程
+                  <span class="glyphicon glyphicon-chevron-right"></span>菜单列表
                   <span class="label label-info pull-right"><%= current_user.teaching_courses.count %></span>
               <% end %>
             </li>
             <li class="list-group-item">
               <%= link_to new_course_path do %>
-                  <span class="glyphicon glyphicon-chevron-right"></span> 创建新课程
+                  <span class="glyphicon glyphicon-chevron-right"></span> 创建新菜品
               <% end %>
             </li>
         <% end %>
@@ -37,13 +37,31 @@
         <% if student_logged_in? %>
             <li class="list-group-item">
               <%= link_to list_courses_path do %>
-                  <span class="glyphicon glyphicon-chevron-right"></span> 选修课程
+                  <span class="glyphicon glyphicon-chevron-right"></span> 热菜
                   <span class="label label-info pull-right"><%= (Course.where(:open => true)-current_user.courses).count %></span>
               <% end %>
             </li>
             <li class="list-group-item">
               <%= link_to courses_path do %>
-                  <span class="glyphicon glyphicon-chevron-right"></span> 已选课程
+                  <span class="glyphicon glyphicon-chevron-right"></span> 凉菜
+                  <span class="label label-info pull-right"><%= current_user.courses.count %></span>
+              <% end %>
+            </li>
+             <li class="list-group-item">
+              <%= link_to courses_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> 主食
+                  <span class="label label-info pull-right"><%= current_user.courses.count %></span>
+              <% end %>
+            </li>
+             <li class="list-group-item">
+              <%= link_to courses_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> 汤类
+                  <span class="label label-info pull-right"><%= current_user.courses.count %></span>
+              <% end %>
+            </li>
+             <li class="list-group-item">
+              <%= link_to courses_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> 酒水饮料
                   <span class="label label-info pull-right"><%= current_user.courses.count %></span>
               <% end %>
             </li>
@@ -58,12 +76,12 @@
       <h4 class="panel-title">
         <% if teacher_logged_in? %>
             <a data-toggle="collapse" data-parent="#accordion" href="#GradeCollapse"><span class="glyphicon glyphicon-user"></span>
-              成绩管理</a>
+              菜单管理</a>
         <% end %>
 
         <% if student_logged_in? %>
             <a data-toggle="collapse" data-parent="#accordion" href="#GradeCollapse"><span class="glyphicon glyphicon-user"></span>
-              所有成绩</a>
+              我的菜单</a>
         <% end %>
       </h4>
     </div>
@@ -86,7 +104,8 @@
         <% if student_logged_in? %>
             <li class="list-group-item">
               <%= link_to grades_path do %>
-                  <span class="glyphicon glyphicon-chevron-right"></span> 所有成绩
+                  <span class="glyphicon glyphicon-chevron-right"></span> 我的菜单
+                  <span class="label label-info pull-right"><%= current_user.courses.count %></span>
               <% end %>
             </li>
         <% end %>

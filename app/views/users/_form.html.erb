@@ -6,7 +6,7 @@
       <div class="col-sm-9">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-          <%= f.text_field :name, class: 'form-control', placeholder: "输入真实姓名" %>
+          <%= f.text_field :name, class: 'form-control', placeholder: "请输入真实姓名" %>
         </div>
       </div>
     </div>
@@ -16,28 +16,28 @@
       <div class="col-sm-9">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-          <%= f.email_field :email, class: 'form-control', placeholder: "输入有效的邮箱" %>
+          <%= f.email_field :email, class: 'form-control', placeholder: "请输入有效的邮箱" %>
         </div>
       </div>
     </div>
-
+<!--
     <div class="form-group">
-      <%= f.label "专业", class: 'col-sm-3 control-label' %>
+      <%= f.label "职工类别", class: 'col-sm-3 control-label' %>
       <div class="col-sm-9">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
-          <%= f.text_field :major, class: 'form-control', placeholder: "输入专业全称" %>
+          <%= f.text_field :major, class: 'form-control', placeholder: "请输入您的类别" %>
         </div>
       </div>
     </div>
-
+-->
 
     <div class="form-group">
-      <%= f.label "培养单位", class: 'col-sm-3 control-label' %>
+      <%= f.label "电话号码", class: 'col-sm-3 control-label' %>
       <div class="col-sm-9">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
-          <%= f.text_field :department, class: 'form-control', placeholder: "输入培养单位全称" %>
+          <%= f.text_field :department, class: 'form-control', placeholder: "请输入您的电话号码" %>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
       <div class="col-sm-9">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-          <%= f.password_field :password, class: 'form-control', placeholder: "输入密码" %>
+          <%= f.password_field :password, class: 'form-control', placeholder: "请输入密码" %>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
       <div class="col-sm-9">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "再次输入密码" %>
+          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "请再次输入密码" %>
         </div>
       </div>
     </div>
